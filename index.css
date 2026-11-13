@@ -1,15 +1,33 @@
 /* fonts */
+@font-face {font-family:"bigblue"; src: url("assets/fonts/BigBlue/BigBlueTerm437NerdFont-Regular.ttf")}
 @font-face {font-family: "nerd"; src: url("assets/fonts/Nerd/SymbolsNerdFont-Regular.ttf");}
 span {font-family: 'Material Icons';}
 
 /* defaults */
-body {background-color:#020406;margin:140px auto;padding-left:min(16px);padding-right:min(16px);max-width:960px;color:#C9C9C9;font-family:Helvetica,sans-serif}
-
-
+body {background-color:#000000;margin:50px auto;padding-left:min(16px);padding-right:min(16px);max-width:960px;color:#ffffff;font-family:Helvetica,sans-serif}
+img {border-radius:8px;outline:1px solid #ffffff30;outline-offset:-1px;}
 hr {display:block; margin-top:0.5em; margin-bottom:0.5em; margin-left:auto; margin-right:auto; border-style:inset; border-width: 2px; border-color:#1b1c1c; border-bottom:none; margin-top:20px;}
+
+a {font-family:bigblue; text-decoration:none; text-decoration-style:dashed;}
+p {font-family:bigblue;}
 
 /* profile */
 .profile {display:flex;}
-.pfp {width:42px;height:auto;border-radius:100%;outline:1px solid #ffffff30;outline-offset:-1px;}
-.name {font-size:28px;font-weight:700;font-family:Helvetica,sans-serif;margin:0;align-self:center;margin:0 16px;top:0px;}
-.about {font-family:Helvetica,sans-serif;font-size:16px;margin:10px 0;}
+.pfp {width:42px;height:auto;border-radius:100%;outline:2px solid #ffffff60;outline-offset:-2px;}
+.name {font-size:28px;font-weight:700;font-family:bigblue,sans-serif;margin:0;align-self:center;margin:0 16px;top:0px;color:#DE9EB9; word-spacing:-10px;}
+.pronouns {font-weight:600; color:#DE9EB980; text-decoration:underline; text-decoration-style: dashed;  text-decoration-thickness: 2px; }
+.about {font-family:bigblue,sans-serif;font-size:16px;margin:20px 0;}
+
+/* footer */
+footer div {display:flex; justify-content:space-between; align-items:center; width:100%; margin-top:20px; color:#4A4A4A}
+
+/* blinkies */
+blinkies {width:100%; overflow:hidden;}
+blinkies div {display:flex; width:max-content; gap:5px; animation:scroll-blinkies 20s linear infinite;
+    /*floaty*/ position:fixed; bottom:0; left:0; z-index:9999;}
+blinkies div img {width:150px; height:20px; flex-shrink:0; border-radius:0px;outline:0px}
+blinkies:hover div {animation-play-state:paused;}
+@keyframes scroll-blinkies {
+    from {transform: translateX(0);}
+    to {transform: translateX(-50%);}
+}
