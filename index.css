@@ -3,6 +3,10 @@
 @font-face {font-family: "nerd"; src: url("assets/fonts/Nerd/SymbolsNerdFont-Regular.ttf");}
 span {font-family: 'Material Icons';}
 
+/* colours */
+.tpink {color:#F5ABB9;}
+.tblue {color:#5BCFFA;}
+
 /* defaults */
 body {background-color:#000000;margin:50px auto;padding-left:min(16px);padding-right:min(16px);max-width:960px;color:#ffffff;font-family:Helvetica,sans-serif}
 img {border-radius:8px;outline:1px solid #ffffff30;outline-offset:-1px;}
